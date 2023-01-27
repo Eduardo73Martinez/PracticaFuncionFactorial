@@ -18,10 +18,10 @@ def factorialDe_(numero):
 
 
 def factorialDe_Osino1(numeroFactorial):
-    """retorna el factorial del numero dado. Si es menor a 0 retorna 1.
+    """Retorna el factorial del numero dado. Si es menor a 0 retorna 1.
 
     Args:
-        numeroFactorial (int): es el numero que deceamos retornal el factorial
+        numeroFactorial (int): es el numero que deceamos retorna el factorial
 
     Returns:
         int: un numeroFactorial, el resultado de hacer el factorial de #numeroFactorial
@@ -30,11 +30,32 @@ def factorialDe_Osino1(numeroFactorial):
     """
     numeroActual = numeroFactorial
     factorial = 1
-    while ( numeroActual > 0 ):
-        factorial = factorial * numeroActual
+    while ( numeroActual >= 0 ):
+        factorial = factorial * numero_SiEsMayorA0EnCasoContrario1(numeroActual)
         numeroActual -= 1
 
     return factorial
 
 
-print(factorialDe_(0))
+def numero_SiEsMayorA0EnCasoContrario1(numero:int):
+    """Describe el numero dado como parametro unicamente si ese número es mayor a 0. En caso contrario 
+        devuelve un 1.
+
+    Args:
+        numero (int): es el numero que deceamos que devuelva si es mayor a 1
+    
+    returns:
+        int: el numero pasado como parametro si es mayor a cero o 1 si es igual a cero.
+        
+    Requeriments:
+        Ninguno.
+    """
+    if(numero > 0):
+        return numero
+    else:
+        return 1
+
+
+
+
+print(factorialDe_(5))
